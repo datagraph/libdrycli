@@ -72,6 +72,7 @@ public:
    * The program's command-line arguments.
    */
   arguments args;
+  char *name;
 };
 
 #endif /* DRY_CLI_PROGRAM_H */
