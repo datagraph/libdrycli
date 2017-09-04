@@ -21,6 +21,7 @@ program::program(int argc, char* argv[]) noexcept {
   assert(argc > 0);
   assert(argv != nullptr);
 
+  name = argv[0];
   for (int i = 1; i < argc; i++) {
     args.push_back(argv[i]);
   }
@@ -37,6 +38,7 @@ program::program(int argc, char* argv[],
   assert(argv != nullptr);
   assert(opts != nullptr);
 
+  name = argv[0];
   std::string short_opts(":");
 
   {
