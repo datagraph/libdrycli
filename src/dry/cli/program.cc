@@ -71,13 +71,13 @@ program::program(int argc, char* argv[],
   const auto long_opts = reinterpret_cast<const struct ::option*>(opts);
   while ((opt = getopt_long(argc, argv, short_opts.c_str(), long_opts, nullptr)) != -1) {
     if (callback) {
-      callback(opt, optarg);
+      callback(opt, optarg, optopt);
     }
   }
 #else
   while ((opt = getopt(argc, argv, short_opts.c_str())) != -1) {
     if (callback) {
-      callback(opt, optarg);
+      callback(opt, optarg, optopt);
     }
   }
 #endif /* HAVE_GETOPT_LONG */

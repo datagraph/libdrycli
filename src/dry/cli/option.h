@@ -9,7 +9,7 @@ namespace dry {
   namespace cli {
     struct option;
     enum class option_argument : int;
-    using option_handler = std::function<void (int, const char*)>;
+    using option_handler = std::function<void (int, const char*, int)>;
   }
 }
 
